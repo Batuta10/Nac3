@@ -1,5 +1,6 @@
 package br.com.fiap.exercicios.listview.RM78792;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -47,7 +48,7 @@ public class PizzaActivity extends AppCompatActivity {
         descricaoPizza.setText(pizza.getDescricao());
         igredientePizza.setText(pizza.getIngredients());
         alergiaPizza.setText(pizza.getAlergia());
-        notaPizza.setText(NumberFormat.getCurrencyInstance().format(pizza.getNota()));
+        notaPizza.setText(String.valueOf(pizza.getNota()));
 
 
 

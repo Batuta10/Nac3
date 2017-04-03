@@ -10,9 +10,9 @@ public class Pizza implements Serializable {
     private String alergia;
     private int img;
     private Double preco;
-    private Double nota;
+    private int nota;
 
-    public Pizza(String sabor, String ingredients, String descricao, String alergia, int img, Double preco, Double nota) {
+    public Pizza(String sabor, String ingredients, String descricao, String alergia, int img, Double preco, int nota) {
         this.sabor = sabor;
         this.ingredients = ingredients;
         this.descricao = descricao;
@@ -70,11 +70,11 @@ public class Pizza implements Serializable {
         this.preco = preco;
     }
 
-    public Double getNota() {
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(Double nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
 }

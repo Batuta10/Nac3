@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="16sp"
+        android:id="@+id/imgPizza"
+        tools:src="@drawable/calabresa" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgPizza"
+        android:layout_alignTop="@+id/imgPizza"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/txtSabor"
+        tools:text="Calabreza" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgPizza"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:id="@+id/txtPreco"
+        tools:text="R$ 59,00" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imgPizza"
+        android:layout_below="@+id/txtSabor"
+        android:id="@+id/txtDescricao"
+        tools:text="Musarela e queijo" />
+</RelativeLayout>

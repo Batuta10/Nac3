@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pizzaria</string>
+    <string name="strPreferencias">Preferencias</string>
+    <string name="strDesliga">Desativar Splash Screen?</string>
+    <string name="strTempo">Tempo que a splash screen deve ter?</string>
+    <string name="strAjuda">(em milissegundos, Ex. 1000 = 1s)</string>
+    <string name="strSalvar">Salvar</string>
+    <string name="strPizzaria">Pizzaria do Batuta</string>
+    <string name="strRM">RM78792</string>
+    <string name="strIgrediente">Igrediente</string>
+    <string name="strAlergia">Alergia</string>
+    <string name="strNota">Nota</string>
+
+</resources>

@@ -1,14 +1,14 @@
 package br.com.fiap.exercicios.listview.RM78792;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import java.text.NumberFormat;
 
 public class PizzaActivity extends AppCompatActivity {
 
@@ -17,9 +17,7 @@ public class PizzaActivity extends AppCompatActivity {
     TextView descricaoPizza;
     TextView igredientePizza;
     TextView alergiaPizza;
-    TextView precoPizza;
     TextView notaPizza;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +48,19 @@ public class PizzaActivity extends AppCompatActivity {
         alergiaPizza.setText(pizza.getAlergia());
         notaPizza.setText(String.valueOf(pizza.getNota()));
 
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        //Condição para escolher o geito que ele vai esconder a barra de baixo
+        if(Build.VERSION.SDK_INT < 19){
+            View v = this.getWindow().getDecorView();
+            v.setSystemUiVisibility(View.GONE);
+        } else {
+            View decorView = getWindow().getDecorView();
+            int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY ;
+            decorView.setSystemUiVisibility(uiOptions);
+        }
 
-    }
+    }//OnCreate
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -63,4 +71,4 @@ public class PizzaActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
-}
+}//Main Class
